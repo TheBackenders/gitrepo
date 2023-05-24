@@ -1,0 +1,45 @@
+<html>
+  <head>
+  
+  </head>
+    <body>
+     
+  
+   
+        <h1> <b>  update family page </b></h>
+ 
+          <?php
+         
+   
+    
+   echo "<form action=update-data?id=".$args['family']->id." method='post'>";
+  
+    echo "<label>Enter full name</label><input value=".$args['family']->full_name." type='text' name='full_name' >";
+    
+     echo "<label>Enter phone number</label><input  type='text' value=".$args['family']->phone_number ." name='phone_number'>";
+     echo "<label>Entermembers count</label><input  type='number' value=".$args['family']->members_count ." name='members_count'>";
+
+     echo '  <label>Enter employment status</label><br>';
+     echo '  <label>Employed</label>';
+     echo " <input  type='radio' name='radiobutton' value='1' checked='true'>";
+     echo "  <label>Unemployed</label><input  type='radio' name='radiobutton' value='0' >";
+     echo "<td><label></label>Choose a new place</label> ";
+     echo "<select name='taskOption' >";
+       
+        foreach($args['places'] as $place){
+         echo "<option value = '$place->id'>".$place->place_name."</option>";
+         
+        }
+       
+    echo"</select></td>";
+    
+    echo"<input type='submit'>";
+   
+    echo "</form>";
+    ?>
+    <a href="/Task1/">Go Back Home</a>
+    </body>
+    
+    </html>
+    
+    </DOCTYPE>
