@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>filter result page</title>
+</head>
+
+<body>
+    <?php 
+
+
+     foreach($args as $family){
+        echo 'Full name is &nbsp;'.'<b>'.$family->full_name.'</b>';
+   echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+   echo 'Family members count is &nbsp;'.'<b>'.$family->members_count.'</b>';
+   echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+   echo 'phone number is &nbsp;'.'<b>'.$family->phone_number.'</b><br>';
+     }
+
+  
+
+?>
+    <a href="/Task1/">Go Back Home</a>
+
+
+</html>

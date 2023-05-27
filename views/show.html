@@ -1,21 +1,35 @@
 <html>
-  <head>
-  
-  </head>
-    <body>
-      <h1>
-        THIS IS THE PAGE THAT SHOWS ALL FAMILIES
-      </h1>
-    <?php
+
+<head>
+
+</head>
+
+<body>
+  <h1>
+    THIS IS THE PAGE THAT SHOWS ALL FAMILIES
+  </h1>
+  <?php
     foreach($args as $family) 
   {
-    echo "<a href = 'delete?id=$family->id'> DELETE This family permenently </a>";
-    echo"<a href='pop-update-page?id=$family->id'>Update This Family Data</a>";
-   echo 'Full name is  '.$family->full_name.' and Email is  '.$family->phone_number.'<br>';
+    echo "<a href = 'delete?id=$family->id'> DELETE This family permanently </a>";
+    echo "&nbsp;&nbsp;&nbsp;"; 
+   echo"<a href='pop-update-page?id=$family->id'>Update This Family Data</a>";
+   echo "&nbsp;&nbsp;&nbsp;"; 
+
+   echo 'Full name is &nbsp;'.'<b>'.$family->full_name.'</b>';
+   echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+   echo 'Family members count is &nbsp;'.'<b>'.$family->members_count.'</b>';
+   echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+ 
+   echo 'Lives in &nbsp;'.'<b>'.$family->withPlace()->place_name.'</b>';
+   echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+   echo 'phone number is &nbsp;'.'<b>'.$family->phone_number.'</b><br>';
   
 
 }
      ?>
-     <a href="/Task1/">Go Back Home</a>
-    </body>
-     </html>
+  <br>
+  <a href="/Task1/">Go Back Home</a>
+</body>
+
+</html>

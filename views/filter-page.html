@@ -1,0 +1,30 @@
+<html>
+
+<h1>
+
+  <br>
+  choose a place to filter
+  <br>
+</h1>
+<form action='apply-filter' method='post'>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <?php
+
+
+echo "<select name='taskOption' >";
+       
+    foreach($args as $place){
+     echo "<option value = '$place->id'>".$place->place_name."</option>";
+     
+    }
+   
+echo"</select></td>";
+
+?>
+  <input type='submit'>
+</form>
+<a href="/Task1/">Go Back Home</a>
+
+</h1>
+
+</html>
